@@ -3,7 +3,8 @@
 
 var button = $('#button');
 
-button.on('click', function () {
+button.on('click', function (e) {
+	e.preventDefault();
 	button = prompt('What is your age?', 'Enter your age here.');
 
 	if (button <= parseFloat(15)) {
